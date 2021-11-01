@@ -1,0 +1,19 @@
+div {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
+
+p {
+    margin-right: 10px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+input {
+    margin-right: 10px;
+}
