@@ -1,12 +1,12 @@
 const addButton = document.getElementById('add')
 
 addButton.onclick = function () {
-    const listElement = document.getElementById('listElement').value
+    var listElement = document.getElementById('listElement').value
     var newItem = `
     <div id='${listElement}'>
         <p>${listElement}</p>
-        <button onclick="deleteItem(child)">Remove</button>
-        <button onclick="updateItem(child)">Update</button>
+        <button onclick="deleteItem(this)">Remove</button>
+        <button onclick="updateItem(this)">Update</button>
         <input id="${listElement}Input">
     `
     list.innerHTML += newItem
@@ -23,8 +23,8 @@ function updateItem (child) {
     var upNm = document.getElementById(parEleId+"Input").value
     parEle.innerHTML = `
         <p>${upNm}</p>
-        <button onclick="deleteItem(child)">Remove</button>
-        <button onclick="updateItem(child)">Update</button>
+        <button onclick="deleteItem(this)">Remove</button>
+        <button onclick="updateItem(this)">Update</button>
         <input id="${upNm}Input">
     `
     parEle.id = upNm
